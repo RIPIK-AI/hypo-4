@@ -34,10 +34,10 @@ function showInfo() {
 	}
 
 	var bias = 0;
-	if (eop_prev1<=560 && hypo_visc_prev1>=510){
+	if ( hypo_visc_prev1>=510){
 		bias = 0.5*hypo_visc_prev1 - 250;
 	}
-	else if(eop_prev1>=626 && hypo_visc_prev1<=490){
+	else if(hypo_visc_prev1<=490){
 		bias = 0.5*hypo_visc_prev1 - 250;
 	}
 	hypo_addition += bias;
@@ -62,7 +62,7 @@ function showInfo() {
 		hypo_addition:hypo_addition,
 	};
 	console.log(data)
-	postData('https://checkproject2-337711.el.r.appspot.com/main/dosage/all', data).then(() => console.log("OK"));
+	postData('https://checkproject2-337711.el.r.appspot.com/main/dosage/all/', data).then(() => console.log("OK"));
 }
 
 async function postData(url, data = {}) {
