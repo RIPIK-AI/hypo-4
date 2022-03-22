@@ -55,14 +55,14 @@ function showInfo() {
 	document.getElementById('info').innerHTML = str;
 	document.getElementById('inputInfo').style.display = "none";
 	document.getElementById('outputInfo').style.display = "block";
-	var data = {
-		Target_hypo_Input: Target_hypo_Input,
-		Target_hypo:Target_hypo,
-		target_loose_pulp_viscosity: target_loose_pulp_viscosity,
-		hypo_addition:hypo_addition,
-	};
-	console.log(data)
-	postData('https://checkproject2-337711.el.r.appspot.com/main/dosage/all/', data).then(() => console.log("OK"));
+// 	var data = {
+// 		Target_hypo_Input: Target_hypo_Input,
+// 		Target_hypo:Target_hypo,
+// 		target_loose_pulp_viscosity: target_loose_pulp_viscosity,
+// 		hypo_addition:hypo_addition,
+// 	};
+// 	console.log(data)
+// 	postData('https://checkproject2-337711.el.r.appspot.com/main/dosage/all/', data).then(() => console.log("OK"));
 }
 
 async function postData(url, data = {}) {
